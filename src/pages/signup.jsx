@@ -15,9 +15,9 @@ const Signup = ()=>{
         addDoc(collection(db, "users"), {
             username: username,
             password: password
-        })
+        });
 
-        navigate('/login')
+        navigate('/login');
     }
     return (
         <>
@@ -27,7 +27,7 @@ const Signup = ()=>{
 
                     <input type="text" name="username" placeholder="Username" onChange={x => setUsername(x.target.value)}/>
                     <input type="password" name="password" placeholder="Password" onChange={x => setPassword(x.target.value)}/>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Sign up</button>
                 </form>
             </div>
         </>
